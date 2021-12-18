@@ -151,6 +151,8 @@
 
 		}
 
+		// following function is for the pannel that we used for changing parameters
+
 		function displayGui() {
 			var gui = new dat.GUI();
 			var speed = 100;
@@ -194,8 +196,6 @@
 
 			g1.rotation.x += rot1;
 			g2.rotation.x += rot2;
-			// g1.rotation.x += .05;
-			// g2.rotation.x += .05;
 
 			var rx = g2.position.x - g1.position.x;
 			var ry = g2.position.y - g1.position.y;
