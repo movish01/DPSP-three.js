@@ -47,7 +47,7 @@
 			//Camera, scene, and renderer
 			scene = new THREE.Scene();
 			camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 1, 1e24);
-			// scene.add(camera);
+			
 			camera.position.set(0, 0, 3e11);
 
 			renderer = new THREE.WebGLRenderer({ antialias: true });
@@ -105,22 +105,22 @@
 
 			s1 = new THREE.Mesh(geometry, material);
 			s1.position.set(0, 0, 0);
-			// var s1mass = 2e30;
+			
 			s1p = new THREE.Vector3(0, 0, -0.5e4);
 			s1p.x = s1p.x * s1mass;
 			s1p.y = s1p.y * s1mass;
 			s1p.z = s1p.z * s1mass;
-			// scene.add(s1);
+			
 
 
 			s2 = new THREE.Mesh(geometry, material);
 			s2.position.set(0, 0, 0);
 			s2p = new THREE.Vector3(0, 0, 1.0e4);
-			// var s2mass = 1e30;
+			
 			s2p.x = s2p.x * s2mass;
 			s2p.y = s2p.y * s2mass;
 			s2p.z = s2p.z * s2mass;
-			// scene.add(s2);
+			
 
 			g1 = new THREE.Group();
 			g1.add(cone2);
@@ -264,7 +264,7 @@
 
 
 		function render() {
-			// renderer.clear();
+			
 			renderer.render(scene, camera);
 		}
 
