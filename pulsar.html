@@ -75,22 +75,23 @@
 			const conegeometry = new THREE.ConeGeometry(5e9, 8e10, 64, 1);
 			const conematerial = new THREE.MeshBasicMaterial({ color: 0xffcccc });
 
+			// for showing the cones
 
-			cone1 = new THREE.Mesh(conegeometry, conematerial);
-			cone1.position.set(0, -3e10, 0);
-			// scene.add(cone1);
+			// cone1 = new THREE.Mesh(conegeometry, conematerial);
+			// cone1.position.set(0, -3e10, 0);
+			// // scene.add(cone1);
 
-			cone2 = new THREE.Mesh(conegeometry, conematerial);
-			cone2.position.set(0, 3e10, 0);
-			cone2.rotation.z += 3.14;
-			// scene.add(cone2);
+			// cone2 = new THREE.Mesh(conegeometry, conematerial);
+			// cone2.position.set(0, 3e10, 0);
+			// cone2.rotation.z += 3.14;
+			// // scene.add(cone2);
 
-			cone3 = new THREE.Mesh(conegeometry, conematerial);
-			cone3.position.set(0, -3e10, 0);
+			// cone3 = new THREE.Mesh(conegeometry, conematerial);
+			// cone3.position.set(0, -3e10, 0);
 
-			cone4 = new THREE.Mesh(conegeometry, conematerial);
-			cone4.position.set(0, 3e10, 0);
-			cone4.rotation.z += 3.14;
+			// cone4 = new THREE.Mesh(conegeometry, conematerial);
+			// cone4.position.set(0, 3e10, 0);
+			// cone4.rotation.z += 3.14;
 
 
 			const geometry = new THREE.SphereGeometry(1e10, 64, 32);
@@ -225,36 +226,37 @@
 			g2.position.y = g2.position.y + ((s2p.y / s2mass) * dt)
 			g2.position.z = g2.position.z + ((s2p.z / s2mass) * dt)
 
+         // for showing the orbit
 
-				if (g1.position.z > 0) {
-					cntx1++;
-				}
-				if (g1.position.z < 0 && cntx1 > 0) {
-					cnty1++;
-				}
-				if (g2.position.z < 0) {
-					cntx2++;
-				}
-				if (g2.position.z > 0 && cntx2 > 0) {
-					cnty2++;
-				}
-				if (cntx1 < 2 || cnty1 < 2) {
-					orbit1 = new THREE.Mesh(sgeometry, smaterial);
-					orbit1.position.x = g1.position.x;
-					orbit1.position.y = g1.position.y;
-					orbit1.position.z = g1.position.z;
+				// if (g1.position.z > 0) {
+				// 	cntx1++;
+				// }
+				// if (g1.position.z < 0 && cntx1 > 0) {
+				// 	cnty1++;
+				// }
+				// if (g2.position.z < 0) {
+				// 	cntx2++;
+				// }
+				// if (g2.position.z > 0 && cntx2 > 0) {
+				// 	cnty2++;
+				// }
+				// if (cntx1 < 2 || cnty1 < 2) {
+				// 	orbit1 = new THREE.Mesh(sgeometry, smaterial);
+				// 	orbit1.position.x = g1.position.x;
+				// 	orbit1.position.y = g1.position.y;
+				// 	orbit1.position.z = g1.position.z;
 
-					scene.add(orbit1);
+				// 	scene.add(orbit1);
 
-				}
-				if (cntx2 < 2 || cnty2 < 2) {
-					orbit2 = new THREE.Mesh(sgeometry, smaterial);
-					orbit2.position.x = g2.position.x;
-					orbit2.position.y = g2.position.y;
-					orbit2.position.z = g2.position.z;
+				// }
+				// if (cntx2 < 2 || cnty2 < 2) {
+				// 	orbit2 = new THREE.Mesh(sgeometry, smaterial);
+				// 	orbit2.position.x = g2.position.x;
+				// 	orbit2.position.y = g2.position.y;
+				// 	orbit2.position.z = g2.position.z;
 
-					scene.add(orbit2);
-				}
+				// 	scene.add(orbit2);
+				// }
 
 
 			render();
